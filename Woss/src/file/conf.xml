@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<woss>
+	<gather class="woss.client.GatherImpl">
+		<src-file>src/tmp</src-file>
+		<bak-file>bak_up.txt</bak-file>
+	</gather>
+	
+	<client class="woss.client.ClientImpl">
+		<server_ip>127.0.0.1</server_ip>
+		<server_port>9999</server_port>
+	</client>
+	
+	<server class="woss.server.ServerImpl">
+		<port>9999</port>
+	</server>
+	
+	<dbstore class="woss.server.DBImpl">
+			<url>jdbc:oracle:thin:@127.0.0.1:1521:XE</url>
+			<driver>oracle.jdbc.driver.OracleDriver</driver>
+			<userName>ljq</userName>
+			<passWord>0915</passWord>
+	</dbstore>
+	
+	<logger class="log.LoggerImp">
+	</logger>
+	
+	<backup class="util.BackUpImp">
+		<back-temp>E:\\workspace\\BD17015_Woss\\file</back-temp>
+	</backup>
+</woss>
+
+
+
+
+
